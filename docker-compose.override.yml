@@ -1,0 +1,13 @@
+version: '5.1.1'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: "${USER_ID:-1000}:${GROUP_ID:-1000}"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./app:/app
+    command: make dev
