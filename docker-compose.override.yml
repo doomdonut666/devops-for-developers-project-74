@@ -11,8 +11,8 @@ services:
     volumes:
       - ./app:/app
     # Режим разработки, без него код 502
-    environment:
-      - NODE_ENV=development
+    env_file:
+      - .env
     command: make dev
   
   caddy:
