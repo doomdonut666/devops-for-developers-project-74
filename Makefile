@@ -1,5 +1,5 @@
-export UID := $(shell id -u)
-export GID := $(shell id -g)
+export USER_ID := $(shell id -u)
+export GROUP_ID := $(shell id -g)
 
 setup:
 	docker-compose run --rm app make setup
